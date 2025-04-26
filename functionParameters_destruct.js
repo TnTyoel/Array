@@ -10,3 +10,11 @@ function sum([a, b]) {
 }
 
 console.log(sum([5, 10]));
+
+
+function greet({ name = "Guest"} = {}) {
+    console.log(`Hello, ${name}`);
+}
+
+greet();
+greet({name: "Alice" });
