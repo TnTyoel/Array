@@ -4,3 +4,4 @@ const [first, second, ...rest] = numbers;
 console.log(first);
 console.log(second);
 console.log(rest);
+
