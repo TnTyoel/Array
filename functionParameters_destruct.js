@@ -4,3 +4,9 @@ function displayUser ({ name3, age3}) {
 
 const user3 = { name3: "Bob", age3: 28};
 displayUser(user3);
+
+function sum([a, b]) {
+    return a + b;
+}
+
+console.log(sum([5, 10]));
