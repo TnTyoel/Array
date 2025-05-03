@@ -9,3 +9,8 @@ const emailRegex =
 /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 console.log(emailRegex.test("test@example.com"));
 console.log(emailRegex.test("invalid@com"));
+
+//Extract hashtags
+const sentence = "Learning #JavaScript is fun! #Coding";
+const hashtags = text.match(/#\w+/g);
+console.log(hashtags)
