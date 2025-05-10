@@ -7,6 +7,14 @@
 </head>
 <body>
     <p id="demo"></p>
+
+    <button id="btn">Without arrow</button>
+    <p id="win"></p>
+
+    <button id="arrow">With arrow</button>
+    <p id="para"></p>
+
+
     <script>
         let myFunction = (a,b) => a * b;
         document.getElementById("demo").innerHTML = myFunction(4, 5)
@@ -36,6 +44,44 @@
 
         w = () => "<br>Hello World!";
         document.write(w())
+
+
+        // One parameter arrow function
+        let j = "";
+
+        j = val => "<br>Hello " + val;
+
+        document.write(j("Universe"))
+
+        
+
+        // Regular function. "this" keyword represents different object depending on how it is called.
+        let yo = "";
+
+            yo = function() {
+            document.getElementById("win").innerHTML += this;
+            }
+
+            //The window object calls the function:
+            window.addEventListener("load", yo);
+
+            //A button object calls the function:
+            document.getElementById("btn").addEventListener("click", yo);
+
+
+            // In arrow function the "this" keyword represents the obkect that owns the function
+
+            h = "";
+
+            h = () => {
+                document.getElementById("para").innerHTML += this;
+            }
+
+            //Window object calls the function
+            window.addEventListener("load", h);
+
+            // A button object calls the function
+            document.getElementById("arrow").addEventListener("click", h);
     </script>
 </body>
 </html>
