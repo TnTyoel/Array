@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let myFunction = (a,b) => a * b;
+        document.getElementById("demo").innerHTML = myFunction(4, 5)
+    
+        // Function syntax without arrow function
+        let hello = "";
+        hello = function() {
+            return "Hello World!";
+        }
+
+        document.write(hello())
+    </script>
+</body>
+</html>
