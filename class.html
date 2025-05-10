@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            // Defining and using Class method
+        age() {
+            const date = new Date();
+            return date.getFullYear() - this.year;
+        }
+        ages(x) {
+            return x - this.year;
+        }
+        }
+
+        const time = new Date();
+        let year = time.getFullYear();
+        
+        const car1 = new Car("Ford", 2009)
+        const car2 = new Car("BMW", 2014)
+
+        document.write(car1.name + ", " + car1.year + " " + car1.age() + " | " + car2.name + ", " + car2.year + " " + car2.age()  )
+        document.write("<br>My car is " + " " + car1.ages(year) + " old!")
+    </script>
+</body>
+</html>
